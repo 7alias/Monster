@@ -1,9 +1,9 @@
-public class Zombie extends Monster {
+public class GiantSnake extends Monster {
 
-    public static String scream = "Raaaauuughhhh";
+    public static String scream = "Ssssss";
 
-    public Zombie(String name) {
-        super(name + " the Zombie", 5);
+    public GiantSnake(String name) {
+        super(name + " the GiantSnake", 5);
     }
 
     @Override
@@ -12,20 +12,21 @@ public class Zombie extends Monster {
 
     }
 
+
     public void growl(boolean loud) {
         if (!loud) {
-            growl();
+            System.out.println(scream);
         } else {
             System.out.print(scream.toUpperCase());
-            growl();
+
         }
     }
 
     @Override
     public void attack() {
-        growl();
+        growl(true);
         super.attack();
-
+        System.out.println("     ...and hid in the grass");
     }
 
 }
