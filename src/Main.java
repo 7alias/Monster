@@ -3,53 +3,26 @@ public class Main {
 
     public static void main(String[] args) {
 /*
-Make class Monster abstract
+
+Make class Entity - the superclass for all entities
 Fix class Zobie and ...
+
 */
+
         Battle battle = new Battle();
         battle.add(new Zombie("Alice"));
-        battle.add(new Zombie("Bob"));
-        battle.add(new Zombie("Eve"));
+        battle.add(new Human("Vasiliy"));
         battle.add(new GiantSnake("Kaa"));
-        battle.add(new GiantSnake("Son of Kaa"));
-        battle.add(new Zombie("Mowgley"));
+        battle.add(new Tower("Big Ben"));
+
         battle.start();
+
+
 /*
-                       ...and The Battle starts!
+
+                       ...and The GreatBattle starts!
+
 */
     }
+
 }
-
-
-/*
-This fragment of code has to output
-
-Monster Alice the Zombie was created
-Monster Bob the Zombie was created
-Monster Eve the Zombie was created
-Monster Kaa the GiantSnake was created
-Monster Son of Kaa the GiantSnake was created
-Monster Noname the Zombie was created
-No more monsters!
-Monster Noname the GiantSnake was created
-No more monsters!
-Monster Alice the Zombie attacked with damage 5
-Raaaauuughhhh Alice the Zombie growled
-Monster Bob the Zombie attacked with damage 5
-Raaaauuughhhh Bob the Zombie growled
-Monster Eve the Zombie attacked with damage 5
-Raaaauuughhhh Eve the Zombie growled
-SSSSSS Kaa the GiantSnake growled
-Monster Kaa the GiantSnake attacked with damage 5
-     ...and hid in the grass
-SSSSSS Son of Kaa the GiantSnake growled
-Monster Son of Kaa the GiantSnake attacked with damage 5
-     ...and hid in the grass
-
-But the Buttle class has ony one println "No more monsters!"
-
-*/
-
-
-
-

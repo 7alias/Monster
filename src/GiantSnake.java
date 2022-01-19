@@ -1,4 +1,4 @@
-public class GiantSnake extends Monster {
+public class GiantSnake extends Monster implements Fighter{
 
     public static String scream = "Ssssss";
 
@@ -6,27 +6,18 @@ public class GiantSnake extends Monster {
         super(name + " the GiantSnake", 5);
     }
 
-    @Override
-    public void growl() {
-        System.out.print(scream);
 
-    }
-
-
-    public void growl(boolean loud) {
-        if (!loud) {
-            System.out.println(scream);
-        } else {
-            System.out.print(scream.toUpperCase());
-
-        }
+    public void growl(){
+        System.out.println(scream);
     }
 
     @Override
-    public void attack() {
-        growl(true);
-        super.attack();
-        System.out.println("     ...and hid in the grass");
+    public void attack(){
+        growl();
     }
 
+    @Override
+    public void attack(Monster monster) {
+
+    }
 }
